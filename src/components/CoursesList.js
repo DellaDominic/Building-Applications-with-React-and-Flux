@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function CoursesList(props) {
   return (
@@ -25,4 +26,17 @@ function CoursesList(props) {
   );
 }
 
+CoursesList.propTypes = {
+  courses: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      authorId: PropTypes.number.isRequired,
+      category: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+CoursesList.defaultProps = {
+  courses: [],
+};
 export default CoursesList;
