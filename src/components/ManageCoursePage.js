@@ -1,10 +1,11 @@
 import React from "react";
+import CourseForm from "./CourseForm";
 
 const ManageCoursePage = (props) => {
   return (
     <React.Fragment>
-      <h1>Manage Course Page</h1>
-      {props.match.params.slug}
+      <h1>Manage Course</h1>
+      <CourseForm />
     </React.Fragment>
   );
 };
