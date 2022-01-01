@@ -12,7 +12,7 @@ const ManageCoursePage = (props) => {
   return (
     <React.Fragment>
       <h1>Manage Course</h1>
-      <CourseForm />
+      <CourseForm course={course} />
     </React.Fragment>
   );
 };
