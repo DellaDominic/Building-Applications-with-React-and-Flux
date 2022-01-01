@@ -10,14 +10,17 @@ const ManageCoursePage = (props) => {
     category: "",
   });
 
-  function handleTitleChange(event) {
-    const updatedCourse = { ...course, title: event.target.value };
+  function handleChange(event) {
+    const updatedCourse = {
+      ...course,
+      [event.target.name]: event.target.value,
+    };
     setCourse(updatedCourse);
   }
   return (
     <React.Fragment>
       <h1>Manage Course</h1>
-      <CourseForm course={course} onTitleChange={handleTitleChange} />
+      <CourseForm course={course} onChange={handleChange} />
     </React.Fragment>
   );
 };
