@@ -19,7 +19,7 @@ function TextInput(props) {
           onChange={props.onChange}
         />
       </div>
-      {props.error && <div className="alert danger-alert">{props.error}</div>}
+      {props.error && <div className="alert alert-danger">{props.error}</div>}
     </div>
   );
 }
