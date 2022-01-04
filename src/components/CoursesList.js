@@ -10,7 +10,7 @@ function CoursesList(props) {
           <th>Title</th>
           <th>Author ID</th>
           <th>Category</th>
-          {/* <th>Edit</th> */}
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -20,9 +20,9 @@ function CoursesList(props) {
               <th>{course.title}</th>
               <th>{course.authorId}</th>
               <th>{course.category}</th>
-              {/* <th>
+              <th>
                 <Link to={"/course/" + course.slug}>Edit</Link>
-              </th> */}
+              </th>
             </tr>
           );
         })}
